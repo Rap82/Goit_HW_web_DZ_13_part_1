@@ -1,6 +1,5 @@
 # Docker-команда FROM вказує базовий образ контейнера
-# Наш базовий образ - це Linux з попередньо встановленим python-3.11
-# FROM python:3.11
+
 FROM python:3.11
 
 # Встановимо змінну середовища
@@ -14,7 +13,7 @@ WORKDIR $APP_HOME
 # COPY . .
 # COPY .env .env
 COPY run.sh run.sh 
-COPY hw13/ hw13/
+COPY web13/ web13/
 COPY requirements.txt requirements.txt
 
 # Встановимо залежності всередині контейнера
